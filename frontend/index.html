@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Recommender</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Anime Recommender</h1>
+      <form id="search-form">
+        <div class="search-box">
+          <textarea
+            id="query"
+            placeholder="Describe what kind of anime you're looking for..."
+            rows="4"
+            aria-label="Anime search query"
+          ></textarea>
+          <button id="search" type="submit">Get Recommendations</button>
+        </div>
+      </form>
+      <div id="error-message" class="error hidden"></div>
+      <div id="loading" class="hidden">Loading...</div>
+      <div id="results" class="hidden" aria-live="polite">
+        <h2>Recommendation</h2>
+        <div id="recommendation"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

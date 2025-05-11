@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { Index } from "@upstash/vector";
 
 const index = new Index({
@@ -33,5 +32,7 @@ export const queryAnime = async (query: string, limit: number = 5) => {
     return results;
   } catch (error) {
     console.error(error);
+    return [];
+
   }
 };
